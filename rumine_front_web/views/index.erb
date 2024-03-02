@@ -4,10 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rumine Front</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <h1>Welcome to Rumine</h1>
-  <p>Title: <%= data['title'] %></p>
-  <p>Slogan: <%= data['slogan'] %></p>
+  <div class="container">
+    <div class="navbar">
+      <ul>
+        <li>One Piece</li>
+        <li>My Hero Academia</li>
+        <!-- Add more menu items as needed -->
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="center-column">
+        <!-- Content for the center column -->
+      </div>
+      <div class="side-column">
+        <div class="title">
+          <h2>Title</h2>
+          <img src="/assets/hime.webp" alt="Hime Image">
+        </div>
+        <div class="hours">
+          <p id="current-time"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code for updating current time every second
+    setInterval(function() {
+      var currentTime = new Date();
+      document.getElementById('current-time').innerText = 'Current Time: ' + currentTime.toLocaleTimeString();
+    }, 1000);
+  </script>
 </body>
 </html>

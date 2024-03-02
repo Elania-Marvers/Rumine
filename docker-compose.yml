@@ -30,6 +30,8 @@ services:
       - "9991:9991"
     depends_on:
       - rumine_back_api
+    volumes:
+      - ./rumine_front_web:/app
 
 volumes:
   mysql_data:

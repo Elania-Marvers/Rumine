@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  
+  .navbar {
+    flex: 1;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 3;
+  }
+  
+  .center-column {
+    flex: 2;
+    background-color: #ddd;
+    padding: 20px;
+  }
+  
+  .side-column {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .title h2 {
+    margin-bottom: 10px;
+  }
+  
+  .hours {
+    margin-top: 20px;
+  }
+  
