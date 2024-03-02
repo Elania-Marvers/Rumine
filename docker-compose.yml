@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: rumine_mysql
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: examplepassword
+      MYSQL_DATABASE: rumine_database
+    ports:
+      - "9993:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  rumine_back_api:
+    build: ./rumine_back_api
+    container_name: rumine_back
+    restart: on-failure
+    ports:
+      - "9992:9992"
+    depends_on:
+      - mysql
+
+  rumine_front_web:
+    build: ./rumine_front_web
+    container_name: rumine_front
+    restart: on-failure
+    ports:
+      - "9991:9991"
+    depends_on:
+      - rumine_back_api
+
+volumes:
+  mysql_data:
